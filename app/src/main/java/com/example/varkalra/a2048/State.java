@@ -319,27 +319,6 @@ public class State {
         grid[pair.first][pair.second] = "2";
     }
 
-    //returns false if no empty position found else finds and fills the position
-    Boolean findRandPosAndFill(){
-        Vector<Pair<Integer, Integer>> vector = new Vector<Pair<Integer, Integer>>();
-        for(int i = 0; i < CONSTANTS.GRID_SIZE; i++){
-            for(int j = 0; j < CONSTANTS.GRID_SIZE; j++){
-                if(mGrid[i][j].equals("")){
-                    vector.add(new Pair<Integer, Integer>(i, j));
-                }else if(mGrid[i][j].equals(CONSTANTS.WINNING_SCORE)){
-                    mWon = true;
-                }
-            }
-        }
-        if(vector.size() == 0) {
-            mLost = true;
-            return false;
-        }
-        int rand = new Random().nextInt(vector.size());
-        Pair<Integer, Integer> pair = vector.get(rand);
-        mGrid[pair.first][pair.second] = "2";
-        return true;
-    }
     Boolean hasLost(){
 
         return mLost;

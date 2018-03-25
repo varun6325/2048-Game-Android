@@ -20,6 +20,8 @@ public class Intermediator {
     }
     State execute(Command cmd){
         State newState = cmd.execute();
+        if(newState.hasLost())
+            return newState;
         if(newState.isupdatedFromPreviousState()) {
             CommandList.add(cmd);
             CheckSizeAndRemove();
