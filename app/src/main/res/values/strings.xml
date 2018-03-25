@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">2048</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY CONTENT</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+</resources>
